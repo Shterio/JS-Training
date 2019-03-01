@@ -26,6 +26,7 @@ function name(input) {
         } else if (sale > 10000) {
             commision = sale * 0.13;
         } 
+        
     } else if (city == 'plovdiv') {
         if (sale >= 0 && sale <= 500) {
             commision = sale * 0.055;
@@ -36,11 +37,13 @@ function name(input) {
         } else if (sale > 10000) {
             commision = sale * 0.145;
         } 
+    } 
+
+    if (commision) {
+        console.log(`${commision.toFixed(2)}`);  
     } else {
-        console.log("error")
+        console.log("error");
     }
 
-    console.log(`${commision.toFixed(2)}`);
-    
 }
 name(['Kaspichan', '-50'])
