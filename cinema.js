@@ -16,7 +16,7 @@ function name(input) {
     
 }
 
-name(['Premiere',
-    10,
-    12
+name(['Normal',
+    21,
+    13
     ])
