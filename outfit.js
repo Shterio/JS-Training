@@ -17,7 +17,7 @@ function name(input) {
             shoes = 'Moccasins';
         }
 
-    } else if (grad > 18 && grad <= 24) {
+    } else if (degrees > 18 && degrees <= 24) {
         if (timeOfDay == "Morning") {
             outfit = 'Shirt';
             shoes = 'Moccasins';
@@ -46,4 +46,4 @@ function name(input) {
     
 }
 
-name(['16', 'Morning'])
+name(['22', 'Afternoon'])
