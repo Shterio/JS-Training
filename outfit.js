@@ -1,15 +1,15 @@
 function name(input) {
-    let grad = Number(input[0]);
+    let degrees = Number(input[0]);
     let timeOfDay = input[1];
     
     let outfit = undefined;
     let shoes = undefined;
 
-    if (grad >= 10 && grad <= 18) {
-        if (timeOfDay == 'Мorning') {
-            outfit = 'Sweatshirt';
-            shoes = 'Sneakers';
-        } else if (timeOfDay == 'Afternoon') {
+    if (degrees >= 10 && degrees <= 18) {
+        if (timeOfDay == "Morning") {
+            outfit = "Sweatshirt";
+            shoes = "Sneakers";
+        } else if (timeOfDay == "Afternoon") {
             outfit = 'Shirt';
             shoes = 'Moccasins';
         } else {
@@ -18,31 +18,31 @@ function name(input) {
         }
 
     } else if (grad > 18 && grad <= 24) {
-        if (timeOfDay == 'Мorning') {
-            outfit = 'Sweatshirt';
-            shoes = 'Sneakers';
-        } else if (timeOfDay == 'Afternoon') {
+        if (timeOfDay == "Morning") {
             outfit = 'Shirt';
             shoes = 'Moccasins';
+        } else if (timeOfDay == 'Afternoon') {
+            outfit = 'T-Shirt';
+            shoes = 'Sandals';
         } else {
             outfit = 'Shirt';
             shoes = 'Moccasins';
         }
 
     } else {
-        if (timeOfDay == 'Мorning') {
-            outfit = 'Sweatshirt';
-            shoes = 'Sneakers';
+        if (timeOfDay == "Morning") {
+            outfit = 'T-Shirt';
+            shoes = 'Sandals';
         } else if (timeOfDay == 'Afternoon') {
-            outfit = 'Shirt';
-            shoes = 'Moccasins';
+            outfit = 'Swim Suit';
+            shoes = 'Barefoot';
         } else {
             outfit = 'Shirt';
             shoes = 'Moccasins';
         }
     }
 
-    console.log(`It's ${grad} degrees, get your ${outfit} and ${shoes}.`);
+    console.log(`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`);
     
 }
 
