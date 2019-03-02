@@ -11,38 +11,51 @@ function name(input) {
         sum = numberOfFlowers * 5;
         if (numberOfFlowers > 80) {
             discount = sum * 0.9;
+        } else {
+            discount = sum * 1;
         }
     } else if (typeOfFlower == "Dahlias") {
         sum = numberOfFlowers * 3.8;
         if (numberOfFlowers > 90) {
             discount = sum * 0.85;
+        } else {
+            discount = sum * 1;
         }
     } else if (typeOfFlower == "Tulips") {
         sum = numberOfFlowers * 2.8;
         if (numberOfFlowers > 80) {
             discount = sum * 0.85;
+        } else {
+            discount = sum * 1;
         }
     } else if (typeOfFlower == "Narcissus") {
         sum = numberOfFlowers * 3;
         if (numberOfFlowers < 120) {
             discount = sum * 1.15;
+        } else {
+            discount = sum * 1;
         }
     } else {
         sum = numberOfFlowers * 2.5;
         if (numberOfFlowers < 80) {
             discount = sum * 1.20;
+        } else {
+            discount = sum * 1;
         }
     }
 
-    if (sum > budget) {
-        money = sum - budget;
+    if (discount > budget) {
+        money = discount - budget;
         console.log(`Not enough money, you need ${money.toFixed(2)} leva more.`);
         
     } else {
-        money = budget - sum;
+        money = budget - discount;
         console.log(`Hey, you have a great garden with ${numberOfFlowers} ${typeOfFlower} and ${money.toFixed(2)} leva left.`);
     }
     
 }
 
-name(['Roses', 55, 250])
+name(['Tulips',
+    88,
+    260
+    ])
