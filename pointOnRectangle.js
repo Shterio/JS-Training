@@ -6,11 +6,14 @@ function name(input) {
     let x = Number(input[4]);
     let y = Number(input[5]);
 
-    if ((x1 < x && x < x2) && (y1 < y && y < y2)) {
-        console.log('Inside / Outside');
+    let firstCondition = (x == x1 || x == x2) && (y >= y1 && y <= y2);
+    let secondCondition = (y == y1 || y == y2) && (x >= x1 && x <= x2);
+
+    if (firstCondition || secondCondition) {
+        console.log('Border');
         
     } else {
-        console.log('Border');
+        console.log('Inside / Outside');
         
     }
 }
@@ -19,6 +22,6 @@ name([2,
     -3,
     12,
     3,
-    12,
+    -8,
     -1
     ])
