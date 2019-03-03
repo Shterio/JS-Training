@@ -22,5 +22,28 @@ function name(input) {
         } else if (hours > 0 && minutes >=10) {
             console.log(`${hours}:${minutes} hours after the start`);
         }
+    } else if ((exam == coming) || (coming >= exam - 30 && coming < exam)) {
+        console.log('On Time');
+        if (coming >= exam - 30 && coming < exam) {
+            console.log(`${minutes} minutes before the start`);
+            
+        }
+    } else {
+        console.log('Early');
+        if (hours == 0) {
+            console.log(`${minutes} minutes before the start`);
+            
+        } else if (hours > 0 && minutes < 10) {
+            console.log(`${hours}:0${minutes} hours before the start`);
+            
+        } else if (hours > 0 && minutes >=10) {
+            console.log(`${hours}:${minutes} hours before the start`);
+        }
     }
 }
+
+name([11,
+    30,
+    12,
+    29
+    ])
