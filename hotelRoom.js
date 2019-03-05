@@ -14,6 +14,14 @@ function name(input) {
         } else if (days > 14) {
             priceStudio *= 0.7;
         } 
+          
+    } else if (month == 'June' || month == 'September') {
+        sumApartment = days * 68.7;
+        priceStudio = days * 75.2;
+
+        if (days > 14) {
+            priceStudio *= 0.8;
+        }
 
     console.log(`Apartment: ${sumApartment.toFixed(2)} lv.`);
     console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
