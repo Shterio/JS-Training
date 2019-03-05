@@ -27,6 +27,9 @@ function name(input) {
         sumApartment = days * 77;
         priceStudio = days * 76;
     }
+    if (days > 14) {
+        sumApartment *= 0.9;
+    }
 
     console.log(`Apartment: ${sumApartment.toFixed(2)} lv.`);
     console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
