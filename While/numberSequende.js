@@ -1,5 +1,5 @@
-function name(params) {
-    let n = Number(params.shift());
+function name(input) {
+    let n = Number(input.shift());
 
     
     
