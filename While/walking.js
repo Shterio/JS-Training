@@ -1,20 +1,39 @@
 function name(input) {
     const goal = 10000;
-    let steps = Number(input.shift());
+    let steps = input.shift();
 
     let sumSteps = 0;
+    let isGoalReached = false;
 
-    while (sumSteps <= goal) {
+    while (sumSteps < goal) {
+        if (steps == 'Going home') {
+            steps = Number(input.shift());
+            sumSteps += steps;
+            if (sumSteps >= goal) {
+                isGoalReached = true;
+            }
+            break;
+        }
+        steps = Number(steps);
         sumSteps += steps;
-        steps = Number(input.shift());
+        steps = input.shift() ;
     }
 
-    console.log('Goal reached! Good job!');
+    if (isGoalReached || sumSteps >= goal) {
+        console.log('Goal reached! Good job!');
+    } else {
+        let diff = goal - sumSteps;
+        console.log(`${diff} more steps to reach goal.`);
+        
+    }
+    
     
 }
 
-name([1000,
-    1500,
-    2000,
-    6500
+name([1500,
+    300,
+    2500,
+    3000,
+    'Going home',
+    200
     ])
