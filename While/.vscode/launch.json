@@ -1,0 +1,36 @@
+"configurations": [
+  {
+    "name": "Attach to Process",
+    "type": "node",
+    "request": "attach",
+    "port": 9229
+}
+
+{
+  "name": "Attach to Process",
+  "type": "node",
+  "request": "attach",
+  "processId": "53426"
+}
+
+{
+  "name": "Attach to Process",
+  "type": "node",
+  "request": "attach",
+  "processId": "${command:PickProcess}"
+}
+
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Launch TypeScript",
+          "type": "node",
+          "request": "launch",
+          "program": "app.ts",
+          "outFiles": [ "${workspaceFolder}/bin/**/*.js" ]
+      }
+  ]
+}
+  ]
+  
