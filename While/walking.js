@@ -19,6 +19,8 @@ function name(input) {
         steps = input.shift() ;
     }
 
+    
+
     if (isGoalReached || sumSteps >= goal) {
         console.log('Goal reached! Good job!');
     } else {
