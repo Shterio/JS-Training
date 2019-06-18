@@ -1,4 +1,4 @@
-animal = () => {
-
+animal = (array) => {
+    let animal = array;
 };
-animal();
+animal(['dog']);
